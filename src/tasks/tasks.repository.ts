@@ -18,7 +18,7 @@ export class TasksRepository extends Repository<Task> {
     query.where({ user });
 
     if (status) {
-      query.andWhere('task.statusdsds = :status', { status });
+      query.andWhere('task.status = :status', { status });
     }
 
     if (search) {
